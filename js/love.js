@@ -55,7 +55,9 @@ let blocks = document.getElementsByClassName("block"),
     timer = null,
     index = 0,  //记录拼接爱心的动画步骤
     clone_block;    //用于克隆方块
-
+let textBox = document.getElementsByClassName("content_text")[0];
+let text = "祝图图永远18岁"
+let strIndex = 0;
 //1.移动方块的【自身中心】到【爱心中心】
 block.style.top = "50%";
 block.style.left = "50%";
@@ -114,7 +116,8 @@ function Rise() {
         // console.log(distance);
         if (distance >= target) {
             clearInterval(timer2);
-
+			typing()
+			
             console.log("升空完毕");
 
         }
@@ -122,7 +125,18 @@ function Rise() {
         love.style.top = (love_top - distance) + "px";
 
     }, 22);
+	
 
+}
+function typing () {
+	if (strIndex <= text.length) {
+	  textBox.innerHTML = text.slice(0, strIndex++) + '_'
+	  timer3 = setTimeout(typing, 200)
+	}
+	else {
+	  textBox.innerHTML = text//结束打字,移除 _ 光标
+	  clearTimeout(timer3)
+	}
 }
 
 window.onload = function () {

@@ -42,8 +42,18 @@ body {
     left: 50%;
     top: 50%;
     position: absolute;
-    margin: -260px 0 0 -220px;
+	
+    margin: -280px 0 0 -220px;
     /*background-color: gray;*/
+}
+.content_text{
+	width: 520px; /* 13 * 40 */
+    height: 440px; /* 11 * 40 */
+    left: 50%;
+    top: 35%;
+    position: absolute;
+    margin: -320px 0 0 -220px;
+	text-align:center
 }
 
 .love .block {
