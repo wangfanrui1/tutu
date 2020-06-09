@@ -10,14 +10,21 @@
 
 </head>
 <body>
-
+<div class="container1">
+    <div id="myModel"  onclick="closeModel()">
+        <div class="model-content" onclick="up()">
+            <div>
+				<img width="100%" id="img" src="" />
+			</div>
+        </div>
+    </div>
+</div>
 <div class="container" onselectstart="return false;" unselectable="on" style="-moz-user-select:none;">
-
-    <div class="body_left">
-        <img src="images/biubiubiu.gif" alt="" ondragstart='return false;'>
+    <div class="body_left" onclick="showModel('images/1.jpg')">
+        <img   src="images/biubiubiu.gif" alt="" ondragstart='return false;'>
     </div>
 	<h1 class="content_text"></h1>
-    <div class="body_center love">
+    <div class="body_center love" onclick="showModel('images/2.jpg')">
         <div class="block">
             <div class="div1"></div>
             <div class="div2"></div>
